@@ -41,6 +41,7 @@ set ttymouse=
 set backupcopy=yes " Setting backup copy preserves file inodes, which are needed for Docker file mounting
 set signcolumn=yes
 set complete-=t " Don't use tags for autocomplete
+set foldmethod=manual
 
 if version >= 703
   set undodir=~/.vim/undodir
@@ -209,6 +210,10 @@ map <LocalLeader>aw :Ack '<C-R><C-W>'
 " TComment
 map <silent> <LocalLeader>cc :TComment<CR>
 map <silent> <LocalLeader>uc :TComment<CR>
+
+" Folding
+nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
+vnoremap <Space> zf
 
 " Vimux
 map <silent> <LocalLeader>rl :wa<CR> :VimuxRunLastCommand<CR>
