@@ -94,7 +94,7 @@ highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 
 " Run terraform fmt on terraform files
-autocmd BufWritePre *.tf call terraform#fmt()
+" autocmd BufWritePre *.tf call terraform#fmt()
 
 " Status
 set laststatus=2
@@ -146,8 +146,6 @@ let g:ruby_indent_assignment_style = 'variable'
 
 let g:no_html_toolbar = 'yes'
 
-let coffee_no_trailing_space_error = 1
-
 let NERDTreeIgnore=['\.pyc$', '\.o$', '\.class$', '\.lo$']
 let NERDTreeHijackNetrw = 0
 
@@ -171,8 +169,6 @@ if exists(':RainbowParenthesesToggle')
   autocmd Syntax   clojure RainbowParenthesesLoadBraces
 endif
 
-let g:puppet_align_hashes = 0
-
 let $FZF_DEFAULT_COMMAND = 'find * -type f 2>/dev/null | grep -v -E "deps/|_build/|node_modules/|vendor/|build_intellij/"' 
 let $FZF_DEFAULT_OPTS = '--reverse'
 let g:fzf_tags_command = 'ctags -R --exclude=".git\|.svn\|log\|tmp\|db\|pkg" --extra=+f --langmap=Lisp:+.clj'
@@ -183,9 +179,6 @@ let g:fzf_action = {
   \ 'ctrl-v': 'vsplit' }
 
 let g:vim_markdown_folding_disabled = 1
-
-let g:go_fmt_command = "goimports"
-let g:go_highlight_trailing_whitespace_error = 0
 
 let g:completor_auto_trigger = 0
 
